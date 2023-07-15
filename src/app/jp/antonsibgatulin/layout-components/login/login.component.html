@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="adviser-form-column">
+
+    <div class="text_h1 good_day" style=""></div>
+
+  </div>
+
+  <div class="window-form-column">
+    <form [formGroup]="form" method="get" (ngSubmit)="onSubmit()">
+      <div class="display-flex" style="margin-top: 50px;">
+        <img src="favicon.ico" class="img-icon">
+      </div>
+
+      <div class="text_h1" style="margin-top: 20px">
+        Login
+      </div>
+
+      <div class="display-flex">
+        <div style="margin-top: 20px;">
+          <div>
+            <input class="input-text" formControlName="email" name="email" placeholder="Email"/>
+          </div>
+        </div>
+      </div>
+      <div class="display-flex" style="margin-top: 20px;">
+        <div>
+          <input class="input-text"  formControlName="password" name="password"  placeholder="Password" type="password"/>
+        </div>
+      </div>
+      <div class="display-flex" style="margin-top: 30px;">
+
+        <button [disabled]="form.invalid || form.disabled" type="submit" class="button blue-back">Log in</button>
+
+      </div>
+    </form>
+  </div>
+</div>
