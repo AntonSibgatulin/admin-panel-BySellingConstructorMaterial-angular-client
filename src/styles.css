@@ -1,15 +1,41 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
+html{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+
+.width-50-percent{
+  width: 50%;
+}
+.width-100-percent{
+  width: 100%;
+}
+
+.margin-top-10{
+  margin-top: 10px;
+}
 
 :root {
   --width-panel: 340px;
   --start-size-panel: 30%;
   --end-size-panel: calc(100% - var(--start-size-panel));
-
+  --top-text-in-left-panel-home: 35px;
+  --shop-img-size-width: 420px;
+  --shop-img-size-height: 354px;
 }
+
 
 body {
   margin: 0px;
 }
+
+
+.pointer {
+  cursor: pointer;
+}
+
 
 .window-form {
   width: 40%;
@@ -27,6 +53,39 @@ body {
   color: black;
   font-weight: 500;
   text-align: center;
+}
+
+.color-grey {
+  color: grey;
+}
+
+.color-red{
+  color: red;
+}
+
+
+.color-green{
+  color: green;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-1024{
+  width: 1024px;
+}
+.bold{
+  font-weight: 700;
+}
+
+
+.text_average {
+  font-size: 14px;
+}
+
+.distance-2{
+  margin-top: 2px;
 }
 
 .input-text {
@@ -79,11 +138,11 @@ body {
   align-items: center;
   top: 0px;
   left: var(--width-panel);
-  z-index: 10;
+  z-index: -1;
   /*
   box-shadow: 2px -4px 15px black;
    */
-  box-shadow: 0px 1px 3px black;
+  box-shadow: -1px 1px 3px black;
 }
 
 .input-text-search {
@@ -159,12 +218,10 @@ body {
   top: 0px;
   left: 0px;
   background-color: #463bfb;
-  z-index: 11;
+  z-index: 0;
   /* box-shadow: -6px 63px 18px black;
-
-   */
-
   box-shadow: 1px 64px 3px black;
+   */
 }
 
 .left_panel .top_element {
@@ -185,7 +242,7 @@ body {
   color: white;
   font-width: 100;
   font-size: 30px;
-  margin-left: 50px;
+  margin-left: var(--top-text-in-left-panel-home);
 }
 
 .container-main {
@@ -198,6 +255,7 @@ body {
   top: 64px;
   left: var(--width-panel);
   padding: 30px;
+
 
 }
 
@@ -256,4 +314,19 @@ body {
 .background_search img {
   width: 25px;
   height: 25px;
+}
+
+
+.form {
+  padding: 15px;
+  border-radius: 18px;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.19);
+}
+
+.form .text_header {
+
+  color: grey;
+  font-size: 18px;
+
 }

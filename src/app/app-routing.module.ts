@@ -6,6 +6,8 @@ import {LoginComponent} from "./jp/antonsibgatulin/layout-components/login/login
 import {HomeLayoutComponent} from "./jp/antonsibgatulin/layouts/home-layout/home-layout.component";
 import {AuthGuard} from "./jp/antonsibgatulin/guards/AuthGuard";
 import {DashboardComponent} from "./jp/antonsibgatulin/home/dashboard/dashboard.component";
+import {ShopsComponent} from "./jp/antonsibgatulin/home/shops/shops.component";
+import {ItemsComponent} from "./jp/antonsibgatulin/home/items/items.component";
 
 
 const routes: Routes = [
@@ -31,7 +33,13 @@ const routes: Routes = [
         path: "dashboard",component:DashboardComponent
       },
       {
-        path: '',redirectTo:'/home/dashboard',pathMatch:"full"
+        path: '', redirectTo: '/home/dashboard', pathMatch: "full"
+      },
+      {
+        path: "shops",component:ShopsComponent
+      },
+      {
+        path: "items",component: ItemsComponent
       }
     ]
   }

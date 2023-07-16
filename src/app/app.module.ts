@@ -14,6 +14,9 @@ import { DashboardComponent } from './jp/antonsibgatulin/home/dashboard/dashboar
 import { MessagesComponent } from './jp/antonsibgatulin/home/messages/messages.component';
 import { ShopsComponent } from './jp/antonsibgatulin/home/shops/shops.component';
 import { ItemsComponent } from './jp/antonsibgatulin/home/items/items.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { CreateShopComponent } from './jp/antonsibgatulin/func/create-shop/create-shop.component';
+import {MatLegacyCardModule} from "@angular/material/legacy-card";
 
 
 @NgModule({
@@ -26,7 +29,8 @@ import { ItemsComponent } from './jp/antonsibgatulin/home/items/items.component'
     DashboardComponent,
     MessagesComponent,
     ShopsComponent,
-    ItemsComponent
+    ItemsComponent,
+    CreateShopComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +38,12 @@ import { ItemsComponent } from './jp/antonsibgatulin/home/items/items.component'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    MatLegacyCardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,CreateShopComponent],
+
 })
 export class AppModule { }

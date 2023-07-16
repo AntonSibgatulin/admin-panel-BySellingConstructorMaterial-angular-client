@@ -1,0 +1,30 @@
+<div class="container-create-shop">
+  <form method="PUT" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="text_h1">Create a new shop</div>
+    <div>
+
+      <input formControlName = "name" placeholder="Name" type="text" class="input-text"/>
+    </div>
+
+    <div class="margin-top-10">
+      <textarea name="description" style="height: 128px" formControlName = "description" placeholder="Description" type="text" class="input-text"></textarea>
+    </div>
+
+    <div  class="margin-top-10">
+      <input name="phone" formControlName = "phone" placeholder="Phone: +7 800 999 88 77" type="number" class="input-text"/>
+    </div>
+
+    <div  class="margin-top-10">
+      <input name="workEmail" formControlName = "workEmail" placeholder="Email adress: email@email.com" type="email" class="input-text"/>
+    </div>
+
+    <div  class="margin-top-10">
+      <input name="address" formControlName = "address" placeholder="Address: 132, My Street, Kingston, New York 12401" type="email" class="input-text"/>
+    </div>
+
+
+    <div class="margin-top-10">
+      <input type="submit" class="button width-100-percent" style="width: calc(100% + 15px)" value="Create"/>
+    </div>
+  </form>
+</div>

@@ -24,4 +24,8 @@ export class TokenService {
   checkAuth() {
     return localStorage.getItem("user.token") != null
   }
+
+  getStartTokenLink(){
+    return "?token="+this.getToken()
+  }
 }

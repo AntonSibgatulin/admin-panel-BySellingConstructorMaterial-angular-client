@@ -1,1 +1,103 @@
-<p>shops works!</p>
+<div class="center" *ngIf="shops$ | async as shops;">
+  <div class="form max-width-1024 margin-auto">
+    <a class="button" (click)="createNewShop()">Create new shop</a>
+
+  </div>
+<a *ngFor="let shop of shops">
+  <div class="form pointer max-width-1024 margin-auto">
+    <div class="parent">
+      <div class="div1">
+
+        <div class="shop_img">
+        </div>
+        <div class="text-info">
+          <div class="text_average color-grey distance-2">
+            Profit: {{shop.profit}}₽
+          </div>
+          <div class="text_average color-grey distance-2">
+            Expenses: {{shop.expenses}}₽
+          </div>
+          <div class="text_average color-grey distance-2">
+            Clear profit: {{ Number(shop.profit) - Number(shop.expenses) }}₽
+          </div>
+
+
+          <div class="text_average color-grey distance-2">
+            Time create: {{getDate(shop.timeCreate)}}
+          </div>
+          <div class="text_average color-grey distance-2">
+            Last time edit: {{getDate(shop.lastUpdate)}}
+          </div>
+          <div class="text_average color-grey distance-2">
+            Shop admin: {{shop.workEmail}}
+          </div>
+          <div class="text_average color-grey distance-2">
+            Phone: {{shop.phone}}
+          </div>
+        </div>
+
+      </div>
+      <div class="div2">
+        <div class="text_header" style="margin-top: 21px;">
+          {{shop.name}}
+        </div>
+        <div class="text_header" style="font-size: 14px;margin-top: 2px;" >
+          Created by {{shop.admin.email}}
+        </div>
+
+
+
+      </div>
+      <div class="div3">
+        <div class="form profit-form">
+          <div class="text_average color-green bold flex" style="font-size: 30px">
+            Clear profit: {{ Number(shop.profit) - Number(shop.expenses) }}₽
+          </div>
+        </div>
+      </div>
+      <div class="div4">
+        <div class="form card">
+          <div class="flex color-green">
+            Profit month
+          </div>
+          <div class="flex color-green">
+            30.000₽
+          </div>
+
+          <div class="flex">
+            <img src="assets/profit.png" style="width: 100px;"/>
+          </div>
+        </div>
+        <div class="form card">
+          <div class="flex color-red">
+            Expenses month
+          </div>
+          <div class="flex color-red">
+            3.000₽
+          </div>
+          <div class="flex">
+            <img src="assets/expenses.png" style="width: 100px;"/>
+          </div>
+        </div>
+      </div>
+      <div class="div5">
+        <div >
+          <div class="text_average color-grey" style="margin-top: 90px;margin-left: 25px">
+            Address: {{shop.address}}
+          </div>
+        </div>
+      </div>
+
+
+      <div class="div6">
+        <div class="button">EDIT ITEMS<img src="assets/items.png" class="img"/> </div>
+        <div class="button margin-top-10 yellow-btn" (click)="editShop(shop)">EDIT<img src="assets/edit.png" class="img"/> </div>
+        <div style="display: none" class="button margin-top-10 yellow-btn">ARCHIVE<img src="assets/archive.png" class="img"/> </div>
+        <div (click)="onDelete(shop.id)" class="button margin-top-10 red-btn" >DELETE<img src="assets/trash.png" class="img"/> </div>
+
+      </div>
+    </div>
+  </div>
+</a>
+
+</div>

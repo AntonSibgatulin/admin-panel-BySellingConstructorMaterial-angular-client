@@ -11,31 +11,30 @@
   <div class="elements">
 
 
-    <div class="element-panel" >
+    <div class="element-panel" routerLink="/home/dashboard">
       <div><img src="assets/dashboard.png"></div>
-      <a>Dashboard</a>
+      <a >Dashboard</a>
     </div>
 
-    <div class="element-panel" >
+    <div class="element-panel">
       <div><img src="assets/message.png"></div>
       <a>Messages</a>
     </div>
 
 
-    <div class="element-panel" >
-      <div><img src="assets/store.png"></div>
-      <a>Shops</a>
-    </div>
-    <div class="element-panel" >
+      <div class="element-panel" routerLink="shops">
+        <div><img src="assets/store.png"></div>
+        <a >Shops</a>
+      </div>
+
+    <div  routerLink="items" class="element-panel">
       <div><img src="assets/items.png"></div>
       <a>Items</a>
     </div>
-    <div class="element-panel" >
+    <div (click)="exit()" class="element-panel">
       <div><img src="assets/exit.png"></div>
       <a>Exit</a>
     </div>
-
-
 
 
   </div>
