@@ -1,9 +1,10 @@
 import {Injectable} from "@angular/core";
+import {Router} from "@angular/router";
 
 @Injectable({providedIn: "root"})
 export class TokenService {
   private token!:string
-  constructor() {
+  constructor(private router:Router) {
   }
 
   saveToken(token: string) {
@@ -17,6 +18,10 @@ export class TokenService {
   getToken() {
     if(this.token == null){
       this.token = localStorage.getItem("user.token") || "NULL"
+      if(this.token == "NULL"){
+        this.exit()
+        this.router.navigate(['/main'])
+      }
     }
     return this.token
   }
@@ -27,5 +32,20 @@ export class TokenService {
 
   getStartTokenLink(){
     return "?token="+this.getToken()
+  }
+
+  saveUser(adminString: string) {
+    localStorage.setItem("user",adminString)
+
+  }
+  getUserEmail(){
+    let data = localStorage.getItem("user") || ""
+    if(data.length == 0){
+      this.exit()
+      this.router.navigate(['/main'])
+      return null;
+    }
+
+    return JSON.parse(data).email
   }
 }

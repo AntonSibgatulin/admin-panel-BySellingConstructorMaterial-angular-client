@@ -1,6 +1,7 @@
 <div class="container-create-shop">
   <form method="PUT" [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="text_h1">Create a new shop</div>
+    <div class="text_h1" *ngIf="data == null">Create a new shop</div>
+    <div class="text_h1" *ngIf="data != null">Update shop</div>
     <div>
 
       <input formControlName = "name" placeholder="Name" type="text" class="input-text"/>
@@ -23,8 +24,11 @@
     </div>
 
 
-    <div class="margin-top-10">
+    <div class="margin-top-10" *ngIf="data==null">
       <input type="submit" class="button width-100-percent" style="width: calc(100% + 15px)" value="Create"/>
+    </div>
+    <div class="margin-top-10" *ngIf="data!=null">
+      <input type="submit" class="button width-100-percent" style="width: calc(100% + 15px)" value="Update"/>
     </div>
   </form>
 </div>

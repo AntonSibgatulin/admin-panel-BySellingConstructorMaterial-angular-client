@@ -13,6 +13,10 @@ export class HomeLayoutComponent implements OnInit,OnDestroy{
               private router:Router) {
   }
 
+  getToken():TokenService{
+    return this.token
+  }
+
   ngOnDestroy(): void {
   }
 

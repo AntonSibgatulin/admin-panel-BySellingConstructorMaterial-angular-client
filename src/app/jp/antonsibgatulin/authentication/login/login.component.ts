@@ -54,7 +54,9 @@ export class LoginComponent implements OnInit, OnDestroy {
       } else {
         this.tokenService.saveToken(data.object.token as string)
 
-       // this.router.navigate(["/home"])
+        let adminString = JSON.stringify(data.object.admin);
+        this.tokenService.saveUser(adminString);
+        this.router.navigate(["/home"])
 
         }
 

@@ -22,7 +22,7 @@
   grid-column: 1;
   grid-row: 1;
   float: right;
-  background: url("src/assets/back_left.jpg");
+  background: url("../../../../../assets/back_left.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position: center;

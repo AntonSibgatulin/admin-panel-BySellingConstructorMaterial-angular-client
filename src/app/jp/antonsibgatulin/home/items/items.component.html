@@ -1,1 +1,117 @@
-<p>items works!</p>
+<span>
+<select  (change)="change($event)" id="select_shop" class="select_shop standart-select"
+        *ngIf="shops$ | async as shops">
+<option *ngFor="let shop of shops" [value]="shop.id">{{shop.name}}: {{shop.address}}</option>
+</select>
+</span>
+<span style="display: flex">
+   <form [formGroup]="form" (ngSubmit)="createCategory()">
+   <div class="form form-search">
+      <div class="text_h1">
+         Create a new category
+      </div>
+      <div>
+         <input placeholder="Name of category" class="input-text-search"
+                style="width: calc(100% - 20px);border-radius:12px;background-color: #f0f2f5;" type="text" name="name"
+                formControlName="name"/>
+      </div>
+      <input type="submit" value="Create" class="button margin-top-10 button-big"/>
+   </div>
+   </form>
+   <form [formGroup]="formSearch" (ngSubmit)="search()">
+   <div class="form form-search" style="margin-left:10px;">
+      <div class="text_h1">
+         Search
+      </div>
+      <div class="left">
+         <input formControlName="search" class="input-text-search input-text-data-search" placeholder="Search"
+                type="text"/>
+         <div class="background_search" style="background-color: #f0f2f5;">
+            <img src="assets/search.png">
+         </div>
+      </div>
+      <input type="submit" value="Search" class="button margin-top-10 button-big yellow-btn"/>
+   </div>
+   </form>
+</span>
+
+
+
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+
+
+
+<span>
+  <form [formGroup]="formCreateItem" (ngSubmit)="createItem()">
+   <div class="form margin-top-20 standart-forms">
+      <div class="text_h1" style="cursor:pointer;" (click)="showOrHide()">
+         Create a new item
+      </div>
+     <span style="display: none" #panelCreate>
+      <div>
+         <input type="text" formControlName="name" class="input-text input-text-data-name-item" placeholder="Name"/>
+      </div>
+      <div class="columns margin-top-10">
+         <input type="number" formControlName="price"
+                class="input-text input-text-data-name-item width-33-percent-with-space-17px"
+                placeholder="Price"/>
+         <input type="number" formControlName="pricePurchase"
+                class="input-text input-text-data-name-item width-33-percent-with-space-17px"
+                placeholder="Purchase price"/>
+         <input type="number" formControlName="count"
+                class="input-text input-text-data-name-item width-33-percent-with-space-17px"
+                placeholder="Count of purchase"/>
+      </div>
+      <div class="margin-top-20">
+         <label for="images" class="drop-container" id="dropcontainer">
+         <span class="drop-title">Drop files here</span>
+         or
+         <input type="file" id="images" accept="image/*" class="img-upload-image" required>
+         </label>
+      </div>
+      <div class="margin-top-20">
+         <textarea formControlName="description" style="height: 100px" class="input-text input-text-data-name-item"
+                   placeholder="Description"></textarea>
+      </div>
+
+      <div class="margin-top-20 columns">
+       <select id="selectId" formControlName="discount" class="select_shop"
+               style="border: 1px solid rgba(128,128,128,0.4);">
+         <option value="true" selected>Show discount</option>
+         <option value="false">Hide discount</option>
+       </select>
+     </div>
+      <div class="margin-top-20 columns">
+
+        <input placeholder="Discount price" formControlName="discount_price" type="number"
+               class="input-text input-text-data-name-item  width-50-percent-with-space-17px"/>
+          <input placeholder="Discount percent" formControlName="discount_percent" type="number"
+                 class="input-text input-text-data-name-item  width-50-percent-with-space-17px"/>
+      </div>
+
+     <div class="margin-top-20">
+         <input type="submit" class="button button-100-percent"/>
+     </div>
+</span>
+   </div>
+
+  </form>
+</span>
+
+
+
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+
+
+
+<span>
+  <div class="form standart-forms">
+
+  </div>
+</span>

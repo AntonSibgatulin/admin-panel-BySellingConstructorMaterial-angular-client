@@ -14,3 +14,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 @New
 ![](screens/img_3.png)![](screens/img_4.png)![](screens/img_5.png)
+
+
+@Items
+![](screens/img_6.png)![](screens/img_7.png)

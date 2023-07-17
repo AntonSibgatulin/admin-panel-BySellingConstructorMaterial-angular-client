@@ -1,19 +1,29 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
-html{
+html {
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 
-.width-50-percent{
+.width-50-percent {
   width: 50%;
 }
-.width-100-percent{
+
+.width-100-percent {
   width: 100%;
 }
 
-.margin-top-10{
+
+.yellow-btn {
+  background-color: #8d8d03;
+}
+
+.red-btn {
+  background-color: red;
+}
+
+.margin-top-10 {
   margin-top: 10px;
 }
 
@@ -24,6 +34,7 @@ html{
   --top-text-in-left-panel-home: 35px;
   --shop-img-size-width: 420px;
   --shop-img-size-height: 354px;
+  --standart-forms-items: 840px;
 }
 
 
@@ -59,23 +70,26 @@ body {
   color: grey;
 }
 
-.color-red{
+.color-red {
   color: red;
 }
 
 
-.color-green{
+.color-green {
   color: green;
 }
-.flex{
+
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.max-width-1024{
+
+.max-width-1024 {
   width: 1024px;
 }
-.bold{
+
+.bold {
   font-weight: 700;
 }
 
@@ -84,7 +98,7 @@ body {
   font-size: 14px;
 }
 
-.distance-2{
+.distance-2 {
   margin-top: 2px;
 }
 

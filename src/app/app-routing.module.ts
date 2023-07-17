@@ -2,7 +2,7 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import {MainComponent} from "./jp/antonsibgatulin/main/main.component";
 import {AuthLayoutComponent} from "./jp/antonsibgatulin/layouts/auth-layout/auth-layout.component";
-import {LoginComponent} from "./jp/antonsibgatulin/layout-components/login/login.component";
+import {LoginComponent} from "./jp/antonsibgatulin/authentication/login/login.component";
 import {HomeLayoutComponent} from "./jp/antonsibgatulin/layouts/home-layout/home-layout.component";
 import {AuthGuard} from "./jp/antonsibgatulin/guards/AuthGuard";
 import {DashboardComponent} from "./jp/antonsibgatulin/home/dashboard/dashboard.component";
