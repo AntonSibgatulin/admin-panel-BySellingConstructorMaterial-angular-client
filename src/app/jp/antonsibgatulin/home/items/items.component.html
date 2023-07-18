@@ -1,5 +1,5 @@
 <span>
-<select  (change)="change($event)" id="select_shop" class="select_shop standart-select"
+<select (change)="change($event)" id="select_shop" class="select_shop standart-select"
         *ngIf="shops$ | async as shops">
 <option *ngFor="let shop of shops" [value]="shop.id">{{shop.name}}: {{shop.address}}</option>
 </select>
@@ -36,12 +36,10 @@
 </span>
 
 
-
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
-
 
 
 <span>
@@ -102,16 +100,534 @@
 </span>
 
 
-
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
-
 
 
 <span>
-  <div class="form standart-forms">
+  <div class="standart-forms">
+
+    <span>
+       <div class="product-container">
+<div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+         <div class="div1 item product">
+<div class="item-image">
+  <img src="https://strodelo.ru/wp-content/uploads/2017/07/metalloprofil.jpg"/>
+</div>
+  <div class="text_average_h2" style="margin-top: 10px">
+    Name of item
+  </div>
+  <div class="text_average color-grey" style="margin-top: 10px">
+    Number of residues: 50pcs
+  </div>
+  <div class="text_average color-grey">
+    Price: <span class="color-red">5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price with discount: <span class="color-red">4.5$</span>
+  </div>
+
+  <div class="text_average color-grey">
+    Price of purchase: <span class="color-green">2.5$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Number of sold: <span class="color-green">5pcs</span>
+  </div>
+
+   <div class="text_average color-grey">
+    Profit: <span class="color-green">20.25$</span>
+  </div>
+
+
+  <div class="text_average color-grey">
+    Clear Profit: <span class="color-green">12.5$</span>
+  </div>
+
+
+
+  <div class="panel-action">
+    <div class="form-action delete-action">
+      <img src="assets/trash_action.png"/>
+    </div>
+  </div>
+  <div class="panel-action">
+    <div class="form-action plus">
+      <img src="assets/plus_.png"/>
+    </div>
+  </div>
+    <div class="panel-action">
+    <div class="form-action edit">
+      <img src="assets/edit_pencil.png"/>
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+    </span>
 
   </div>
 </span>
