@@ -2,11 +2,12 @@ import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from
 import {TokenService} from "../../service/token.service";
 import {ShopService} from "../../service/shop.service";
 import {ItemService} from "../../service/item.service";
-import {Observable} from "rxjs";
+import {async, Observable} from "rxjs";
 import {Shop} from "../../interfaces/ShopInterfaces";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 import * as $ from 'jquery'
+import {ShopItems} from "../../interfaces/ShopItems";
 
 
 @Component({
@@ -17,12 +18,14 @@ import * as $ from 'jquery'
 export class ItemsComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild("panelCreate") panelCreate!: ElementRef
   panelCreateOpened = false
-  id = -1
+  id:Number = -1
   viewInited = false
   shops$!: Observable<Shop[]>
   form!: FormGroup
   formSearch!: FormGroup
   formCreateItem!: FormGroup;
+
+  items$!:Observable<ShopItems[]>
 
 
   constructor(private itemService: ItemService,
@@ -53,9 +56,20 @@ export class ItemsComponent implements OnInit, OnDestroy, AfterViewInit {
       description: new FormControl(null, [Validators.required, Validators.minLength(150)]),
       discount: new FormControl(null),
       discount_price: new FormControl(null),
-      discount_percent: new FormControl(null)
+      discount_percent: new FormControl(null),
+      image: new FormControl(null)
 
     })
+
+
+    this.shops$.subscribe((d:Shop[])=>{
+      if(d.length>0) {
+        this.id = d[0].id;
+        this.items$ = this.itemService.getAllMyItems(this.id)
+      }
+    })
+
+
 
 
   }
@@ -69,6 +83,7 @@ export class ItemsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   createCategory() {
 
+
   }
 
   search() {
@@ -77,6 +92,7 @@ export class ItemsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   createItem() {
 
+      this.itemService.create(this.formCreateItem.value,this.id)
   }
 
   ngAfterViewInit(): void {
